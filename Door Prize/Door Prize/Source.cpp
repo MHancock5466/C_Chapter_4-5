@@ -6,6 +6,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include "Testing.cpp"
 using namespace std;
 
 int doorGame() {
@@ -34,43 +35,62 @@ int doorGame() {
 }
 
 int randomGame() {
-	int numChoice;
-	int secretNum;
-	srand(time(NULL));
-	secretNum = rand() % 10 + 1;
-
+	int numChoice = 0;
+	int secretNum = 0;
+	
 	cout << "******************************************" << endl;
 	cout << "** Welcome to the 'Random Number' game! **" << endl;
 	cout << "******************************************" << endl;
 
-	cout << "Pick a number between 1 and 10. You will win if you can match the randomly selected number.\nYour Choice: ";
-	cin >> numChoice;
-	cout << "The randomly generated number was " << secretNum << "." << endl;
+	do {
+		srand(time(NULL));
+		secretNum = rand() % 10 + 1;
 
-	if (numChoice == secretNum) {
-		cout << "Well done. You have won." << endl;
-	}
-	else {
-		cout << "Nice try. You lost." << endl;
-	}
+		cout << "Pick a number between 1 and 10. You will win if you can match the randomly selected number.\nYour Choice: ";
+		cin >> numChoice;
+		cout << "The randomly generated number was " << secretNum << "." << endl;
+
+		if (numChoice == secretNum) {
+			cout << "Well done. You have won." << endl;
+		}
+		else {
+			cout << "Nice try. You lost." << endl;
+		}
+	} while (numChoice != secretNum);
+	return 0;
+}
+
+int randomGame2() {
+	testingFunction();
+
 	return 0;
 }
 
 int main() {
-	int gameChoice;
+	int gameChoice = 0;
 
-	cout << "Would you like to play the door prize game, or random number game?\nDoor = 1, Random = 2\nYour Choice: ";
-	cin >> gameChoice;
+	while (gameChoice != 3) {
+		cout << "Would you like to play the door prize game, or one of the two random games?\nRandom 1 = 1, Random 2 = 2, Door = 3, To Quit Playing = 3\nYour Choice: ";
+		cin >> gameChoice;
+	
+		if (gameChoice == 1) {
+			randomGame();
+		}
+		else if (gameChoice == 2) {
+			randomGame2();
+		}
+		else if (gameChoice == 3) {
+			doorGame();
+		}
+		else if (gameChoice == 4) {
+			cout << "Ciao." << endl;
+		}
+		else {
+			cout << "That was not an option. Good day." << endl;
+			gameChoice = 3;
+		}
+	}
 
-	if (gameChoice == 1) {
-		doorGame();
-	}
-	else if (gameChoice == 2) {
-		randomGame();
-	}
-	else {
-		cout << "That was not an option. Good day." << endl;
-	}
 	system("pause");
 	return 0;
 }
