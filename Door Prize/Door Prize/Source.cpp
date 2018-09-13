@@ -6,7 +6,7 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "Testing.cpp"
+#include "Testing.h"
 using namespace std;
 
 int doorGame() {
