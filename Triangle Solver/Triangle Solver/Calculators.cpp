@@ -4,7 +4,7 @@
 #include "Triangles.h"
 using namespace std;
 
-double pythagoreanA(double b, double c) {
+double pythagoreanAB(double b, double c) {
 	double a = pow(pow(c, 2) - pow(b, 2), 0.5);
 	return a;
 }
