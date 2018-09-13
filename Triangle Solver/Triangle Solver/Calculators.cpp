@@ -19,3 +19,11 @@ double perimeterCalc(double a, double b, double c) {
 	return perimeter;
 }
 
+double areaRight(double a, double b) {
+	double area = a * b * 0.5;
+	return area;
+}
+
+double areaIsoEqui(double a, double c) {
+	double height = pythagoreanAB(a, c);
+}

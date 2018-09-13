@@ -3,8 +3,6 @@
 #include "Triangles.h"
 using namespace std;
 
-int isocelesTriangle() {
+void isocelesTriangle() {
 
-
-	return 0;
 }
