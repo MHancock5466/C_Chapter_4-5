@@ -5,13 +5,13 @@
 using namespace std;
 
 double pythagoreanAB(double b, double c) {
-	double a = pow(pow(c, 2) - pow(b, 2), 0.5);
-	return a;
+	double aCalc = pow(pow(c, 2) - pow(b, 2), 0.5);
+	return aCalc;
 }
 
 double pythagoreanC(double a, double b) {
-	double c = pow(pow(a, 2) + pow(b, 2), 0.5);
-	return c;
+	double cCalc = pow(pow(a, 2) + pow(b, 2), 0.5);
+	return cCalc;
 }
 
 double perimeterCalc(double a, double b, double c) {
@@ -20,10 +20,12 @@ double perimeterCalc(double a, double b, double c) {
 }
 
 double areaRight(double a, double b) {
-	double area = a * b * 0.5;
-	return area;
+	double areaRight = a * b * 0.5;
+	return areaRight;
 }
 
 double areaIsoEqui(double a, double c) {
 	double height = pythagoreanAB(a, c);
+	double areaIsoEqui = areaRight(height, a);
+	return areaIsoEqui;
 }
