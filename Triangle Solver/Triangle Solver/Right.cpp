@@ -10,8 +10,8 @@ void rightTriangle() {
 	double c;
 	double missingSide = 0;
 
-	cout << "" << endl;
-	cout << "Which side of the right triangle are you solving for? 1 - A, 2 - B, 3 - C? ";
+	cout << endl;
+	cout << "Which side are you solving for? 1 - A, 2 - B, 3 - C? ";
 	cin >> sideChoice;
 
 	if (sideChoice == 1) {
@@ -42,7 +42,8 @@ void rightTriangle() {
 		cout << "Could not read user input.";
 	}
 
-	cout << "Your missing side is: " << missingSide << endl;
-	cout << "Your perimeter is: " << perimeterCalc(a, b, c) << endl;
-	cout << "Your area is : " << areaRight(a, b) << endl;
+	cout << "Your missing side is: " << missingSide << "." << endl;
+	cout << "Your perimeter is: " << perimeterCalc(a, b, c) << "." << endl;
+	cout << "Your area is : " << areaRight(a, b) << "." << endl;
+	cout << endl;
 }
