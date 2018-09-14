@@ -25,7 +25,7 @@ double areaRight(double a, double b) {
 }
 
 double areaIsoEqui(double a, double c) {
-	double height = pythagoreanAB(a, c);
+	double height = pythagoreanAB(0.5 * a, c);
 	double areaIsoEqui = areaRight(height, a);
 	return areaIsoEqui;
 }
