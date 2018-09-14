@@ -5,12 +5,12 @@
 using namespace std;
 
 double pythagoreanAB(double b, double c) {
-	double aCalc = pow(pow(c, 2) - pow(b, 2), 0.5);
+	double aCalc = sqrt(pow(c, 2) - pow(b, 2));
 	return aCalc;
 }
 
 double pythagoreanC(double a, double b) {
-	double cCalc = pow(pow(a, 2) + pow(b, 2), 0.5);
+	double cCalc = sqrt(pow(a, 2) + pow(b, 2));
 	return cCalc;
 }
 

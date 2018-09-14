@@ -8,7 +8,7 @@ void rightTriangle() {
 	double a;
 	double b;
 	double c;
-	double missingSide;
+	double missingSide = 0;
 
 	cout << "" << endl;
 	cout << "Which side of the right triangle are you solving for? 1 - A, 2 - B, 3 - C? ";
