@@ -11,7 +11,7 @@ void rightTriangle() {
 	double missingSide;
 
 	cout << "" << endl;
-	cout << "Which side of the right triangle are you solving for? 1 - A, 2 - B, 3 - C? ";
+	cout << "Which side of the right triangle are you solving for? A - 1, B - 2, C - 3? ";
 	cin >> sideChoice;
 
 	if (sideChoice == 1) {
