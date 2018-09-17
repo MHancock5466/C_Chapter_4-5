@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-	int triangleChoice;
+	double triangleChoice;
 
 	cout << "Welcome to the triangle calculator." << endl;
 	
@@ -29,6 +29,7 @@ int main() {
 		}
 		else {
 			cout << "User did not input a valid number" << endl;
+			cout << endl;
 		}
 	} while (triangleChoice != 4);
 
