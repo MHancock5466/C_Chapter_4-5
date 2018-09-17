@@ -72,7 +72,7 @@ int randomGame2() {
 		srand(time(NULL));
 		secretNum = rand() % 100 + 1;
 
-		cout << "Pick a number between 1 and 10. You will win if you can match the randomly selected number.\nYour Choice: ";
+		cout << "Pick a number between 1 and 100. You will win if you can match the randomly selected number.\nYour Choice: ";
 		cin >> numChoice;
 		cout << "The randomly generated number was " << secretNum << "." << endl;
 
