@@ -4,17 +4,17 @@
 using namespace std;
 
 void rightTriangle() {
-	int sideChoice;
+	char sideChoice;
 	double a;
 	double b;
 	double c;
 	double missingSide = 0;
 
 	cout << endl;
-	cout << "Which side are you solving for? 1 - A, 2 - B, 3 - C? ";
+	cout << "Which side are you solving for? A, B, or C? ";
 	cin >> sideChoice;
 
-	if (sideChoice == 1) {
+	if (sideChoice == 'A' || sideChoice == 'a') {
 		cout << "Please input your B value (A=Base, B=Side, C=Hypotenuse): ";
 		cin >> b;
 		cout << "Please input your C value (A=Base, B=Side, C=Hypotenuse): ";
@@ -22,7 +22,7 @@ void rightTriangle() {
 		missingSide = pythagoreanAB(b, c);
 		a = missingSide;
 	}
-	else if (sideChoice == 2) {
+	else if (sideChoice == 'B' || sideChoice == 'b') {
 		cout << "Please input your A value (A=Base, B=Side, C=Hypotenuse): ";
 		cin >> a;
 		cout << "Please input your C value (A=Base, B=Side, C=Hypotenuse): ";
@@ -30,7 +30,7 @@ void rightTriangle() {
 		missingSide = pythagoreanAB(a, c);
 		b = missingSide;
 	}
-	else if (sideChoice == 3) {
+	else if (sideChoice == 'C' || sideChoice == 'c') {
 		cout << "Please input your A value (A=Base, B=Side, C=Hypotenuse): ";
 		cin >> a;
 		cout << "Please input your B value (A=Base, B=Side, C=Hypotenuse): ";
