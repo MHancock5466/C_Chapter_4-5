@@ -61,8 +61,28 @@ int randomGame() {
 }
 
 int randomGame2() {
-	testingFunction();
+	int numChoice = 0;
+	int secretNum = 0;
 
+	cout << "******************************************" << endl;
+	cout << "** Welcome to the 'Random Number' game! **" << endl;
+	cout << "******************************************" << endl;
+
+	do {
+		srand(time(NULL));
+		secretNum = rand() % 100 + 1;
+
+		cout << "Pick a number between 1 and 10. You will win if you can match the randomly selected number.\nYour Choice: ";
+		cin >> numChoice;
+		cout << "The randomly generated number was " << secretNum << "." << endl;
+
+		if (numChoice == secretNum) {
+			cout << "Well done. You have won." << endl;
+		}
+		else {
+			cout << "Nice try. You lost." << endl;
+		}
+	} while (numChoice != secretNum);
 	return 0;
 }
 
