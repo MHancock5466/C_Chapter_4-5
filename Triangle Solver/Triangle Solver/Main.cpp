@@ -12,7 +12,7 @@ int main() {
 	cout << "Welcome to the triangle calculator." << endl;
 	
 	do {
-		cout << "What type of triangle are you solving for?\n1 - Right, 2 - Isoceles, 3 - Equilateral, 4 - Exit\nYour Choice: " << endl;
+		cout << "What type of triangle are you solving for?\n1 - Right, 2 - Isoceles, 3 - Equilateral, 4 - Exit\nYour Choice: ";
 		cin >> triangleChoice;
 
 		if (triangleChoice == 1) {
