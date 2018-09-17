@@ -69,7 +69,7 @@ int randomGame2() {
 int main() {
 	int gameChoice = 0;
 
-	while (gameChoice != 3) {
+	do {
 		cout << "Would you like to play the door prize game, or one of the two random games?\nRandom 1 = 1, Random 2 = 2, Door = 3, To Quit Playing = 3\nYour Choice: ";
 		cin >> gameChoice;
 	
@@ -88,8 +88,8 @@ int main() {
 		else {
 			cout << "That was not an option. Good day." << endl;
 			gameChoice = 3;
-		}
-	}
+		} 
+	} while (gameChoice != 4);
 
 	system("pause");
 	return 0;
