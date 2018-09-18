@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "Triangles.h"
 using namespace std;
 
@@ -45,8 +46,8 @@ void rightTriangle() {
 		}
 	} while (sideChoice != "A" && sideChoice != "a" && sideChoice != "B" && sideChoice != "b" && sideChoice != "C" && sideChoice != "c");
 
-	cout << "Your missing side is: " << missingSide << "." << endl;
-	cout << "Your perimeter is: " << perimeterCalc(a, b, c) << "." << endl;
-	cout << "Your area is : " << areaRight(a, b) << "." << endl;
+	cout << fixed << setprecision(2) << "Your missing side is: " << missingSide << endl;
+	cout << fixed << setprecision(2) << "Your perimeter is: " << perimeterCalc(a, b, c) << endl;
+	cout << fixed << setprecision(2) << "Your area is : " << areaRight(a, b) << endl;
 	cout << endl;
 }

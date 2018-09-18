@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <iomanip>
 #include "Triangles.h"
 using namespace std;
 
@@ -12,7 +13,7 @@ void isocelesTriangle() {
 	cin >> a;
 	cout << "Please input your B/C value (Side): ";
 	cin >> b;
-	cout << "Your perimeter is " << perimeterCalc(a, b, b) << "." << endl;
-	cout << "Your area is " << areaIsoEqui(a, b) << "." << endl;
+	cout << fixed << setprecision(2) << "Your perimeter is " << perimeterCalc(a, b, b) << "." << endl;
+	cout << fixed << setprecision(2) << "Your area is " << areaIsoEqui(a, b) << "." << endl;
 	cout << endl;
 }
