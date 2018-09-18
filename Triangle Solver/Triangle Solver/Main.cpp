@@ -12,21 +12,17 @@ int main() {
 	cout << "Welcome to the triangle calculator." << endl;
 	
 	do {
-		cout << "What type of triangle are you solving for?\n1 - Right, 2 - Isoceles, 3 - Equilateral, 4 - Exit\nYour Choice: ";
+		cout << "What type of triangle are you solving for?\n1 - Right\n2 - Isoceles\n3 - Equilateral\n4 - Exit\nYour Choice: ";
 		cin >> triangleChoice;
 
-		if (triangleChoice == 1) {
+		if (triangleChoice == 1)
 			rightTriangle();
-		}
-		else if (triangleChoice == 2) {
+		else if (triangleChoice == 2)
 			isocelesTriangle();
-		}
-		else if (triangleChoice == 3) {
+		else if (triangleChoice == 3)
 			equilateralTriangle();
-		}
-		else if (triangleChoice == 4) {
+		else if (triangleChoice == 4)
 			cout << "Goodbye user." << endl;
-		}
 		else {
 			cout << "User did not input a valid number" << endl;
 			cout << endl;

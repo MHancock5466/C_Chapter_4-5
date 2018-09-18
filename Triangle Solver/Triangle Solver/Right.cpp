@@ -13,7 +13,7 @@ void rightTriangle() {
 
 	do {
 		cout << endl;
-		cout << "Which side are you solving for? A, B, or C? ";
+		cout << "Which side are you solving for?\nA\nB\nC\nYour Choice: ";
 		cin >> sideChoice;
 
 		if (sideChoice == "A" || sideChoice == "a") {
