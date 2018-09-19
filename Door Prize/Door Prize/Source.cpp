@@ -6,7 +6,6 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include "Testing.h"
 using namespace std;
 
 int doorGame() {
@@ -90,25 +89,25 @@ int main() {
 	int gameChoice = 0;
 
 	do {
-		cout << "Would you like to play the door prize game, or one of the two random games?\nRandom 1 = 1, Random 2 = 2, Door = 3, To Quit Playing = 3\nYour Choice: ";
+		cout << "Would you like to play the door prize game, or one of the two random games?\nRandom 1 = 1, Random 2 = 2, Door = 3, To Quit Playing = 4\nYour Choice: ";
 		cin >> gameChoice;
-	
-		if (gameChoice == 1) {
+
+		switch (gameChoice) {
+		case 1:
 			randomGame();
-		}
-		else if (gameChoice == 2) {
+			break;
+		case 2:
 			randomGame2();
-		}
-		else if (gameChoice == 3) {
+			break;
+		case 3:
 			doorGame();
-		}
-		else if (gameChoice == 4) {
+			break;
+		case 4:
 			cout << "Ciao." << endl;
+			break;
+		default:
+			cout << "Invalid Response." << endl;
 		}
-		else {
-			cout << "That was not an option. Good day." << endl;
-			gameChoice = 3;
-		} 
 	} while (gameChoice != 4);
 
 	system("pause");
