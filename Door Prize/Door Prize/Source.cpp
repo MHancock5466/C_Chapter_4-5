@@ -36,6 +36,7 @@ int doorGame() {
 int randomGame() {
 	int numChoice = 0;
 	int secretNum = 0;
+	int attempts = 0;
 	
 	cout << "******************************************" << endl;
 	cout << "** Welcome to the 'Random Number' game! **" << endl;
@@ -48,12 +49,13 @@ int randomGame() {
 		cout << "Pick a number between 1 and 10. You will win if you can match the randomly selected number.\nYour Choice: ";
 		cin >> numChoice;
 		cout << "The randomly generated number was " << secretNum << "." << endl;
+		attempts++;
 
 		if (numChoice == secretNum) {
-			cout << "Well done. You have won." << endl;
+			cout << "Well done. You have won in " << attempts << " attempts." << endl;
 		}
 		else {
-			cout << "Nice try. You lost." << endl;
+			cout << "Nice try. You lost. Your Attempts: " << attempts << endl;
 		}
 	} while (numChoice != secretNum);
 	return 0;
@@ -62,10 +64,12 @@ int randomGame() {
 int randomGame2() {
 	int numChoice = 0;
 	int secretNum = 0;
+	int attempts = 0;
 
 	cout << "******************************************" << endl;
 	cout << "** Welcome to the 'Random Number' game! **" << endl;
 	cout << "******************************************" << endl;
+	cout << endl;
 
 	do {
 		srand(time(NULL));
@@ -73,13 +77,14 @@ int randomGame2() {
 
 		cout << "Pick a number between 1 and 100. You will win if you can match the randomly selected number.\nYour Choice: ";
 		cin >> numChoice;
+		cout << endl;
 		cout << "The randomly generated number was " << secretNum << "." << endl;
 
 		if (numChoice == secretNum) {
-			cout << "Well done. You have won." << endl;
+			cout << "Well done. You have won in " << attempts << " attempts." << endl;
 		}
 		else {
-			cout << "Nice try. You lost." << endl;
+			cout << "Nice try. You lost. Your attempts: " << attempts << endl;
 		}
 	} while (numChoice != secretNum);
 	return 0;
@@ -89,7 +94,7 @@ int main() {
 	int gameChoice = 0;
 
 	do {
-		cout << "Would you like to play the door prize game, or one of the two random games?\nRandom 1 = 1, Random 2 = 2, Door = 3, To Quit Playing = 4\nYour Choice: ";
+		cout << "Would you like to play the door prize game, or one of the two random games?\n1 - Random 1\n2 - Random 2\n3 - Door\n4 - To Quit\nYour Choice: ";
 		cin >> gameChoice;
 
 		switch (gameChoice) {
